@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SelfPay.Models.Produto>
+
+@{
+    ViewData["Title"] = "Produto";
+}
+
+<h1>Produto</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.produto_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.produto_nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.produto_desc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.produto_ativo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.produto_preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.produto_precoPromo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.produto_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.produto_nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.produto_desc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.produto_ativo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.produto_preco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.produto_precoPromo)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
