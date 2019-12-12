@@ -28,7 +28,7 @@ namespace SelfPay
             services.AddControllersWithViews();
 
             services.AddDbContext<SelfPayContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("SelfPayContext")));
+                    options.UseMySql(Configuration.GetConnectionString("SelfPayContext"), builder => builder.MigrationsAssembly("SelfPay")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
