@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<SelfPay.Models.Produto>
 
 @{
-    ViewData["Title"] = "Produto";
+    ViewData["Title"] = "Index";
 }
 
-<h1>Produto</h1>
+<h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -12,9 +12,6 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.produto_id)
-            </th>
             <th>
                 @Html.DisplayNameFor(model => model.produto_nome)
             </th>
@@ -37,9 +34,6 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.produto_id)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.produto_nome)
             </td>
             <td>
@@ -55,9 +49,9 @@
                 @Html.DisplayFor(modelItem => item.produto_precoPromo)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                <a asp-action="Edit" asp-route-id="@item.produto_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.produto_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.produto_id">Delete</a>
             </td>
         </tr>
 }
