@@ -13,19 +13,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.produto_nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.produto_desc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.produto_ativo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.produto_preco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.produto_precoPromo)
+                @Html.DisplayNameFor(model => model.Produto_nome)
+            </th>                                   
+            <th>                                   
+                @Html.DisplayNameFor(model => model.Produto_desc)
+            </th>                                   
+            <th>                                    
+                @Html.DisplayNameFor(model => model.Produto_ativo)
+            </th>                                   
+            <th>                                    
+                @Html.DisplayNameFor(model => model.Produto_preco)
+            </th>                                   
+            <th>                                    
+                @Html.DisplayNameFor(model => model.Produto_precoPromo)
             </th>
             <th></th>
         </tr>
@@ -34,24 +34,24 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.produto_nome)
+                @Html.DisplayFor(modelItem => item.Produto_nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.produto_desc)
+                @Html.DisplayFor(modelItem => item.Produto_desc)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.produto_ativo)
+                @Html.DisplayFor(modelItem => item.Produto_ativo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.produto_preco)
+                @Html.DisplayFor(modelItem => item.Produto_preco)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.produto_precoPromo)
+                @Html.DisplayFor(modelItem => item.Produto_precoPromo)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.produto_id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.produto_id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.produto_id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Produto_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Produto_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Produto_id">Delete</a>
             </td>
         </tr>
 }

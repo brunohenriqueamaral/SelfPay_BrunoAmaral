@@ -34,7 +34,7 @@ namespace SelfPay.Controllers
             }
 
             var produto = await _context.Produto
-                .FirstOrDefaultAsync(m => m.produto_id == id);
+                .FirstOrDefaultAsync(m => m.Produto_id == id);
             if (produto == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace SelfPay.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("produto_id,produto_nome,produto_desc,produto_ativo,produto_preco,produto_precoPromo")] Produto produto)
         {
-            if (id != produto.produto_id)
+            if (id != produto.Produto_id)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace SelfPay.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProdutoExists(produto.produto_id))
+                    if (!ProdutoExists(produto.Produto_id))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace SelfPay.Controllers
             }
 
             var produto = await _context.Produto
-                .FirstOrDefaultAsync(m => m.produto_id == id);
+                .FirstOrDefaultAsync(m => m.Produto_id == id);
             if (produto == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace SelfPay.Controllers
 
         private bool ProdutoExists(int id)
         {
-            return _context.Produto.Any(e => e.produto_id == id);
+            return _context.Produto.Any(e => e.Produto_id == id);
         }
     }
 }

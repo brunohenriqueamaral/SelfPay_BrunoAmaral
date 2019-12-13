@@ -14,6 +14,15 @@ namespace SelfPay.Data
         {
         }
 
-        public DbSet<SelfPay.Models.Produto> Produto { get; set; }
+        public DbSet<Produto> Produto { get; set; }
+        public DbSet<Carrinho> Carrinho { get; set; }
+        public DbSet<CarrinhoItens> Carrinhoitens { get; set; }
+        public DbSet<Categoria> Categoria { get; set; }
+        public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Pedido> Pedido { get; set; }
+        public DbSet<PedidoItens> PedidoItens { get; set; }
+        public DbSet<ProdutoCategoria> ProdutoCategoria { get; set; }
+
+
     }
 }
