@@ -1,0 +1,44 @@
+﻿@model SelfPay.Models.Pedido
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Pedido</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Pedido_id" />
+            <div class="form-group">
+                <label asp-for="Pedido_valor" class="control-label"></label>
+                <input asp-for="Pedido_valor" class="form-control" />
+                <span asp-validation-for="Pedido_valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CarrinhoItens_id" class="control-label"></label>
+                <input asp-for="CarrinhoItens_id" class="form-control" />
+                <span asp-validation-for="CarrinhoItens_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pedido_dataCadastro" class="control-label"></label>
+                <input asp-for="Pedido_dataCadastro" class="form-control" />
+                <span asp-validation-for="Pedido_dataCadastro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
