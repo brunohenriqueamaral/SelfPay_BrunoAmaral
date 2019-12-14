@@ -51,6 +51,8 @@ namespace SelfPay.Data
 
             var teste = _context.SaveChanges();
             Debug.WriteLine(teste);
+
+        https://stackoverflow.com/questions/3031412/how-to-export-a-mysql-database-using-command-prompt
         }
     }
     
